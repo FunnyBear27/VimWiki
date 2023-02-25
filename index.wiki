@@ -1,0 +1,91 @@
+= Main tools =
+	== CLI ==
+		* [[/commands/cli|Commands]]
+
+	== VIM ==
+		* [[/bindings/vim|VIM Bindings]]
+		* [[/commands/vim|VIM Commands]]
+		
+	== LLVM ==
+		* [[/commands/lldb|LLDB Commands]]
+	
+	== Clang ==
+		* [[/commands/clang|Clang Flags]]
+	
+	== TMUX ==
+		* [[/bindings/tmux|TMUX Bindings]]
+		* [[/other/tmuxlayouts|Custom Layouts]]
+	
+	== GIT ==
+		* [[/commands/git|Git Commands]]
+
+= Programming =
+	* [[/programming/makefile|Makefile]]
+	
+= Other tools =
+	* [[/other/screensavers|Screensavers]]
+	* [[/other/hex_und_bin|Hex and bin]]
+
+= Projects =
+	* [[projects/gzipdecompressor|GZIPDecompressor]]
+	* [[projects/png2ascii|ASCII art from PNG]]
+
+= Links =
+	== Reddit ==
+		=== Informatics ===
+			[[https://www.reddit.com/r/cpp/|CPP]]
+			[[https://www.reddit.com/r/cpp_questions/|CPP questions]]
+			[[https://www.reddit.com/r/programming/|Programming]]
+			[[https://www.reddit.com/r/learnprogramming/|Learn Programming]]
+			[[https://www.reddit.com/r/algorithms/|Algorithms]]
+			[[https://www.reddit.com/r/bash/|Bash]]
+			[[https://www.reddit.com/r/commandline/|CLI]]
+			[[https://www.reddit.com/r/lowlevel/|Low Level]]
+			[[https://www.reddit.com/r/osdev/|OS Dev]]
+			[[https://www.reddit.com/r/compsci/|Computer Science]]
+			[[https://www.reddit.com/r/networking/|Networking]]
+		
+		=== Rice fields  ===
+			[[https://www.reddit.com/r/tmux/|TMUX]]
+			[[https://www.reddit.com/r/linux/|Linux]]
+			[[https://www.reddit.com/r/unixporn/|UnixPorn]]
+			[[https://www.reddit.com/r/vim/|VIM]]
+			[[https://www.reddit.com/r/vimplugins/|VIM Plugins]]
+			[[https://www.reddit.com/r/vimporn/|VIMPorn]]
+			[[https://www.reddit.com/r/neovim/|NeoVIM]]
+			[[https://www.reddit.com/r/suckless/|Suckless]]	
+		
+	== Learning resources ==
+		=== Programming ===
+			[[https://github.com/yuchdev/CppBooks|GitHub C++ books]]	
+			[[https://github.com/fenbf/AwesomePerfCpp|C++ articles, talks, etc]]
+			[[https://github.com/Besnn/computer-science-and-computer-engineering-books-and-resources|CS]]
+			[[https://en.cppreference.com/w/|C/C++ reference]]
+			[[https://cplusplus.com|Some C++ articles, references, tutorials]]
+			[[https://isocpp.org/faq|C++ FAQ]]
+			[[https://www.youtube.com/@cppweekly/videos|James Turner Weekly]]
+			[[https://www.youtube.com/@TheCherno/videos|The Cherno]]
+			
+		=== Mathematics ===
+			[[https://www.youtube.com/@khanacademy/playlists?view=50&sort=dd&shelf_id=6|Khan Academy]]
+			[[shorturl.at/chAP4|Reddit list of resources]]
+			- [[https://www.youtube.com/@MathemaTrick/playlists|Grundmathe]]
+			- [[https://www.youtube.com/@ThomasKlose/playlists|Mathe, Physik auf Deutsch]]	
+			
+		=== Physics ===
+			[[https://www.youtube.com/playlist?list=PL8dPuuaLjXtN0ge7yDk_UA0ldZJdhwkoV|Crash Course]]
+			[[https://www.youtube.com/@fermilab/playlists|Rather SciPop]]
+			[[https://www.youtube.com/@MichelvanBiezen/playlists/|Physics, Maths, Chemistry, etc]]
+			- [[https://www.youtube.com/@ThomasKlose/playlists|Mathe, Physik auf Deutsch]]	
+			
+		=== Chemistry ===
+			[[https://www.chemedx.org/JCEDLib/QBank/collection/ConcepTests/intro_sb.html|Tests]]	
+			[[https://www.youtube.com/playlist?list=PL166048DD75B05C0D|Khan Academy]]
+			- [[https://www.youtube.com/playlist?list=PL893kmKdclxUr2ipGUHdn8nFy3Gcp4G2Q|Grundlagen]]
+				
+		== Some interesting links ==
+			- [[https://www.youtube.com/@simpleclub_chemie/playlists|SciPop auf Deutsch]]
+			
+			
+			
+			

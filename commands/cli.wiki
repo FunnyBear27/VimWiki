@@ -1,0 +1,187 @@
+== && | & | ; ==
+	* && allows to write commands one after another
+		- clear ; ls && pwd
+		
+	* ; does the same thing, but the second command runs even when the first one fails
+		- clear ; ls ; pwd
+	
+	* & allows to run a second command while the first one is still running. This allows to "hide" the first process. To see the background job, use command <jobs>
+		- ls -la & pwd
+		- ls -la & (The <ls> command will be backgrounded)
+		
+	To kill a background process, run the <kill N> (Where N is the index in <jobs>)
+
+== ln ==
+	<ln> creates a hard link to a file. The flag -s creates a soft link to that file
+		- ln a (target_file) b (new link)
+		- ln -s a (target_file) b (new link)
+		
+== Search through command history ==
+	Ctrl + r enters the reverse-i-search mode. Type a part of the command and it will show it to you
+	
+== mkdir -p | tree ==
+	* <mkdir> with -p flag creates missing directories written in the path
+		- mkdir -p a/b/c (In an empty directory will create the whole path)
+	
+	* <tree> outputs a nice directory tree
+		- tree -L 2 (will print a tree, limited to two levels)
+
+== df | du | ncdu | ps ==
+	* <df> shows information about connected disk sizes
+		- df -h (in a human-readable format)
+	
+	* <du> shows space usage of the directory. <ncdu> just does it better 
+		- du -h --max-depth=1 (--max-depth works as -L with <tree>)
+		- ncdu
+	
+	* <ps> shows running processes
+		- ps
+
+== whereis | which | type ==
+	* <whereis> prints the path to a command binary and it's man-page
+		- whereis ls
+	
+	* <which> does the same, but without man-page
+		- which ls
+	
+	* <whatis> shows one-line description
+		- whatis ls
+	
+	* <type> show the bin path and what it actually is 
+		- type ls
+	
+== locate | find ==
+	* <locate> finds a file on the system in the cache list
+		- locate README.md
+	
+	* <find> looks through the file system. Allows for many filters, execute commands, etc
+		- find ~/ -iname "README.md"
+
+== wget | curl ==
+	* <wget> downloads a file from the internet and saves the file to the current directory. Can download recursively
+		- wget www.google.com
+	
+	* <curl> can do the same, but doesn't work recursively and can send data
+		- curl www.google.com --output ~/google_folder/index.html
+
+== tar ==
+	<tar> unzips a tar archive or zips a file
+		- tar -xf zipped.tar
+		- tar -cf zipped.tar not_zipped
+		- tar -zcf zipped.tar.gz not_zipped (-z flag compresses the file to .gz)
+	
+== | > < ==
+	* | is a pipe operator, that redirects the output of the first command to the second
+		- ls | wc (wc returns the number of lines, words, bytes in a file or in an input)
+		
+	* > redirects the output to a file
+		- ls > output.txt
+
+	* < gets input from a file or a command
+		- sort <(printf "1\n3\n2") (<printf> is an improved <echo>)
+
+== !! ==
+	!! pastes the previous command. Used with sudo
+		- rm -rf folder (let's say, that the folder can only be deleted by superuser)
+		- sudo !!
+
+
+= File Premissions, ls -l, chmod and chown =
+	Can be inspected using <ls -l> command.
+	The first symbol represents the type of the file: "d" = directory; "l" = link; "-" = regular file.
+	The next 9 symbols show the premissions. 1st three: owner; 2nd three: owner group; 3rd three: other user
+	=== Premissions ===
+		* "r" - read
+		* "w" - write
+		* "x" - execute or open the folder
+		
+		This 9-digit sequence can be represented by a number:
+			rwxr-xr-x is 111 101 101, or 755
+		
+	=== Amount of links ===
+		Represented by the second column in <ls -l> output
+	
+	== chmod ==
+		Modifies permissions of the file
+			- chmod 777 test
+			
+				or
+				
+			- chmod +rwx test
+	
+	== chown == 
+		Changes the owner of the file
+			- chown new_owner test
+
+
+= Text processing =
+	== uniq ==
+		prints unique lines
+			- uniq test.txt
+	
+	== sort ==
+		prints lines, sorted alphabetically
+			- sort test.txt
+	
+	== diff ==
+		prints line difference information
+			- diff a.txt b.txt
+
+	== cmp == 
+		difference in bytes
+			- cmp a.txt b.txt
+			
+	== cut ==
+		Cut a line on delimiter
+			- cut -d'.' c -f1
+	
+	== sed ==
+		Stream EDitor. A very powerfull tool, typically used to substitute text, selectively print text files, edit text files and many more. 
+		
+		[[https://www.tutorialspoint.com/sed/sed_workflow.htm|guide]]
+		
+		Substitute usage:
+			- echo cat catapult | sed s/cat/dog/
+		
+
+	== grep ==
+		Used to fined lines of the file, that follow some pattern
+			- grep -e ".*.txt" ~/.bash_profile
+			
+	== awk ==
+		<awk> is also very powerful text edit tool
+			[[https://www.baeldung.com/linux/awk-guide|guide]]
+			
+			- printf "A 10\nB 20\nC 60" > file
+			awk 'BEGIN {sum=0; count=0; OFS=" "} {sum+=$2; count++} END {print "Average:", sum/count}' file
+			
+
+= SSH connection =
+	== ssh ==
+		Used to connect to a UNIX machine over a network
+			- ssh -p <port> name@137.xxx.xxx.89
+	
+	== scp ==
+		Secure copy over ssh
+			- scp -P <port> file.txt name@137.xxx.xxx.89
+
+	== rsync ==
+		A file-copying tool which minimizes the amount of data by looking for deltas or diffs between the files
+		
+		- rsync -azP source_dir/ new_dir (-a might be replace with -r, baut it has more features and is the recommended option. -z flag adds compression. -P shows progress)
+	
+	== yes ==  
+		Conitually outputs "y" untill it's killed
+			- yes
+
+	== nohup ==
+		Ensures, that the process will continue running even if the connection (or the shell) is closed.
+			- nohup yes &
+	
+	== cron | crontab | >> ==
+		Schedule tasks
+		[[https://code.tutsplus.com/tutorials/scheduling-tasks-with-cron-jobs--net-8800|guide]]
+	
+		
+= Resources =
+	[[https://docstore.mik.ua/orelly/unix/upt/ch17_01.htm|unix power tools]]
