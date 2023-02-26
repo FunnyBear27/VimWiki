@@ -2,7 +2,10 @@
 	== Motions ==
 		=== Horizontal === 
 			> w < - hop over by a word -> (word)
+			> W < - hop over by a word (can contain punktuation) -> (word)
+			
 			> b < - hop over by a word <- (back)
+			> B < - Can contain punktuation
 			> _ < - first line symbol
 			> 0 < - beginning of the line (Not always works the way, you expect it to)
 			> $ < - end of the line
@@ -12,6 +15,22 @@
 				- To go to the next occurance of s after using > f <, use > ; <. To the previous - > , <
 			
 		=== Vertical === 
+			> C-d < - go half a screen down. In my vimrc (init.vim) it is binded to > C-d zz <
+				- > zz < centers the window position on the cursor
+				
+			> C-u < - go half a screen up. In my vimrc (init.vim) it is binded to > C-u zz <
+			
+			> gj < - one line down in multi-line text
+			> gk < - one line up in multi-line text
+			> } < - next paragraph. Or funtion/block in code
+			> { < - previous paragraph. Or funtion/block in code
+			
+		=== Other ===
+			Press > * < on the word, that you want to find.
+				- Press > n < to see the next occurance. > N < - to see the previous
+				- More on searching: [[../commands/vim.wiki|VIM Commands]]
+			
+			> C-w < - To change the window
 		
 		
 	== Editing ==
@@ -21,8 +40,68 @@
 			> gU(x)$ < - Make all symbols to the end of the line upper register
 			> gu(x)0 < - Make all symbols to the end of the line lower register
 			> df(s) < - Delete everything to the first s symbol
+			> diw < - Delete the word
+			> diW < - With punktuation
 			
 			...	
 			
 			Editing keys can be combined with motion keys in a number of different ways
+		
+		=== Replace ===
+			> r < - replace a single character
+			> R < - replice a number of character. ESC - exit
 			
+		=== Indent ===
+			>> - indent one tabe
+			<< - de-indent one tabe
+				- Can be used in visual mode
+
+
+= Standard visual selection mode bindings =
+	== Selection ==
+		> V < - linewise visual mode
+		> C-v < - visual block mode
+		> vi(p) < - select everything inside of p paretheses.
+		> va(p) < - select everything and paretheses.
+			- > ya(p) < - copy everything inside of p and p
+			- > yi(p) < - copy everything inside of p
+			* If you are inside of p, these commands will select/copy everything inide of those.
+			* If you your cursor is on the opening parentheses, it will select/copy the following block.
+		
+		> viw < - selects the word. No matter, where in hte word the cursor is
+		> viW < - select everything until whitespaces
+		
+
+
+= Custom =
+	== Often used ==
+		> ÷ < - Comment the line (works in visual mode)
+		> K < - Show documentation
+		> \tb < - TagBar toggle
+		
+	== Floaterm == 
+		> F7 < - New
+		> F6 < - Kill
+		> F8 < - Hide
+		> F9 < - Show
+	
+	== CocAutocompletion ==
+		> TAB < - Navigate through suggested options
+		> S-TAB < - Show completion window
+		> C-y < - Toggle completion	
+		
+	== CocNavigation ==
+		> gd < - Go to definition
+		> gy < - Go to type definition
+		> gi < - Implementation
+		> gr < - References
+	
+	== CocDiagnostics ==
+		> SPACE-a < - show diagnostics for the current file. Use numbers to jump
+		
+	== Telescope ==
+		> \ff < - Find files in current directory
+		> \fg < - Live grep
+		> \fb < - Current buffers 	
+		> \fh < - Tags man pages
+	
