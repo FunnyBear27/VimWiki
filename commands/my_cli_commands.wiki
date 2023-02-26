@@ -1,0 +1,23 @@
+= tmux =
+	- tmux : start tmux
+	== In tmux ==
+		- tmdev : tmux layout for developement
+		- tmchill : collection of screensavers
+
+= yabai =
+	- yb : start yabai. Alias for "brew services start yabai"
+	- ybs : stop yabai. Alias for "brew services stop yabai"
+
+= Change locale = 
+	- export LANG=en_US.UTF-8 : already set in .bash_profile
+	- locale : prints locale settings
+
+= Hex and bin =
+	- hex-fiend file_name : open file in hex-fiend application
+	
+	- xxd file_name : print hex of the file.
+		* -b to print in binary
+		* -c(x) to show 2 * x bites in each line
+		
+	- hexdump -C file_name : print file in hex. For me it is more readable, than xxd
+

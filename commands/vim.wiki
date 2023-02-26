@@ -1,0 +1,12 @@
+= Standard =
+	== Substitution ==
+		:%s/foo/bar/g - Find all occurance of foo and change them to bar
+		:%s/foo/bar/gc - Ask for confirmation
+		:%s/\<foo\>/bar/g - Replace only whole foo
+		:%s/foo/bar/gi - Case insensitive 
+	
+	== Searching ==
+		/word will find all occurances of the word word
+			- n : Next occurance of the word
+			- N : Previous
+

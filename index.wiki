@@ -1,6 +1,7 @@
 = Main tools =
 	== CLI ==
-		* [[/commands/cli|Commands]]
+		* [[/commands/cli|Standard commands]]
+		* [[commands/my_cli_commands|My most used commands]]
 
 	== VIM ==
 		* [[/bindings/vim|VIM Bindings]]

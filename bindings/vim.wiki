@@ -78,6 +78,7 @@
 		> ÷ < - Comment the line (works in visual mode)
 		> K < - Show documentation
 		> \tb < - TagBar toggle
+		> CMD-f < - Toggle search
 		
 	== Floaterm == 
 		> F7 < - New
