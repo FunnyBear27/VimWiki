@@ -1,0 +1,28 @@
+= Standard normal mode bindings =
+	== Motions ==
+		=== Horizontal === 
+			> w < - hop over by a word -> (word)
+			> b < - hop over by a word <- (back)
+			> _ < - first line symbol
+			> 0 < - beginning of the line (Not always works the way, you expect it to)
+			> $ < - end of the line
+			
+			> f(s) < - jump -> to the next s symbol (forward)
+			> F(s) < - jump <- to the previous s symbol
+				- To go to the next occurance of s after using > f <, use > ; <. To the previous - > , <
+			
+		=== Vertical === 
+		
+		
+	== Editing ==
+		=== Combining === 
+			> d(x)j < - delete x lines down
+			> y(x)k < - delete x lines up
+			> gU(x)$ < - Make all symbols to the end of the line upper register
+			> gu(x)0 < - Make all symbols to the end of the line lower register
+			> df(s) < - Delete everything to the first s symbol
+			
+			...	
+			
+			Editing keys can be combined with motion keys in a number of different ways
+			
